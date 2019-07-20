@@ -1,0 +1,106 @@
+;base line
+lines 10,20,30
+
+;screen size 
+
+screen_width 1920
+screen_height 1080
+
+;conditional reboot
+dtmf_reboot_stations 16:532
+dtmf_reboot_delay_sec 40
+dtmf_sleep 5
+explayer_nl_reboot_sec 30
+
+;sequential update [enabled/disabled]
+;only 3 stations + strict order
+seq_update enabled
+seq_update_s 31:29:34
+
+;top header decoration
+header_decor_10 header_red.png
+header_decor_20 header_blue.png
+header_decor_30 header_green.png
+header_origin_x 0
+header_origin_y 0
+header_height 90
+header_width -1
+header_line_logo_origin_x 60
+header_line_logo_origin_y 18
+header_line_prefix M
+header_font ProbaNav2.otf
+header_font_size 70
+header_font_color 0xFFFFFF
+header_show_always 1
+
+;video view
+video_view_origin_x 0
+video_view_origin_y 0
+
+video_view_width 1920
+video_view_height 1080
+
+;
+resource_path resources
+
+;clock decoration
+clock_font ProbaNav2.otf
+clock_font_size 72
+clock_color 0xFFFFFF
+clock_background default_bg.png
+clock_origin_x 1700
+clock_origin_y 15
+
+;run-line decoration
+message_font DroidSansMono.ttf
+message_font_size 56
+message_background_10 message_bg_red.png
+message_background_20 message_bg_blue.png
+message_background_30 message_bg_green.png
+message_color 0xFBF6D9
+message_origin_x 0
+message_origin_y -1
+message_width -1
+message_show_always 0
+
+;dtmf settings
+dtmf_window_size 120
+dtmf_time_out 140
+dtmf_sample_rate 8000
+dtmf_capture_frame_size 170
+dtmf_capture_frame_count 15
+
+video_lines_source video/lines_source
+video_clips video/clips
+
+ftp_login subway
+ftp_passw subway
+
+;
+download_dir download
+download_patch_dir patches
+download_video_clips_dir video_clips
+download_text_dir text
+upload_dir export
+upload_patch_dir patches
+upload_clips_dir clips
+upload_text_dir text
+
+patch_list patch.txt
+patch_md5 patch.md5
+playlist_prefix playlist
+cliplist_prefix clips
+playlists playlist10,playlist20,playlist30
+cliplists clips10,clips20,clips30
+common_text common.json
+common_md5 common.md5
+spec_text spec_text.json
+spec_text_md5 spec_text.md5
+
+log_period 15
+log_dir out
+ftp_log_dir import
+
+clips_uninterrupted=1
+
+
